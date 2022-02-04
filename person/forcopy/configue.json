@@ -1,0 +1,142 @@
+{
+  "pa": [
+    {
+      "name": "https://www.eastmoney.com/",
+      "content": "#hq-news-main > div:nth-child(2) > div.hq-news-con-b.first.on >div.hq-news-data > div.hq-news-value.item_nowPrice",
+      "shortcut": "fund<1000",
+      "mode": "",
+      "result": "3361.44"
+    }
+  ],
+  "serve": [
+    {
+      "name": "shangzheng",
+      "url": "https://www.eastmoney.com/",
+      "content": "#hq-news-main > div:nth-child(2) > div.hq-news-con-b.first.on >div.hq-news-data > div.hq-news-value.item_nowPrice"
+    }
+  ],
+  "url": [
+    {
+      "name": "translate",
+      "content": "https://translate.google.cn/",
+      "shortcut": "alt+g",
+      "jsStr": "console.log(9)",
+      "mode": "url"
+    },
+    {
+      "name": "tell",
+      "content": "https://github20080512.github.io/tell/",
+      "shortcut": "alt+l",
+      "jsStr": "",
+      "mode": "url"
+    }
+  ],
+  "link": [
+    { "name": "design", "content": "https://js.design/" },
+    { "name": "runoob", "content": "https://c.runoob.com/" },
+    { "name": "baidu", "content": "https://www.baidu.com" }
+  ],
+  "file": [
+    {
+      "name": "diary",
+      "content": "@-@person\\\\localHtml\\\\index.html",
+      "shortcut": "alt+0",
+      "jsStr": "console.log(9)",
+      "mode": "file"
+    },
+    {
+      "name": "search",
+      "content": "@-@person\\\\search\\\\index.html",
+      "shortcut": "alt+1",
+      "jsStr": "",
+      "mode": ""
+    }
+  ],
+  "cmd": [
+    {
+      "name": "desktop",
+      "content": "explorer C:\\Users\\Administrator\\Desktop",
+      "shortcut": "ctrl+shift+7",
+      "mode": "cmd"
+    },
+    {
+      "name": "kill vs",
+      "content": "taskkill /f /t /im Code.exe",
+      "shortcut": "alt+e",
+      "mode": "cmd"
+    }
+  ],
+  "quickCopy": [
+    {
+      "name": "test",
+      "content": "@W~",
+      "shortcut": "ctrl+shift+alt+3",
+      "mode": ""
+    }
+  ],
+  "quickDefault": [
+    {
+      "name": "set zoom 0",
+      "content": "",
+      "shortcut": "ctrl+alt+0",
+      "mode": ""
+    },
+    {
+      "name": "top true or false",
+      "content": "",
+      "shortcut": "ctrl+alt+1",
+      "mode": ""
+    },
+    {
+      "name": "close app",
+      "content": "",
+      "shortcut": "ctrl+alt+w",
+      "mode": ""
+    },
+    { "name": "hide", "content": "", "shortcut": "alt+q", "mode": "" },
+    { "name": "note", "content": "", "shortcut": "ctrl+alt+3", "mode": "" },
+    {
+      "name": "translate",
+      "content": "",
+      "shortcut": "ctrl+shift+c",
+      "mode": ""
+    },
+    { "name": "google translate", "content": "", "shortcut": "f4", "mode": "" }
+  ],
+  "settings": {
+    "httpPort": { "httpPort": "12121" },
+    "otherPath": "C:\\Users\\ADMIN\\Music",
+    "AutoClose": {
+      "isAutoClose": "1",
+      "describe": "isAutoClose type 1 or 0",
+      "closeTime": "20:00:00"
+    },
+    "escToDisBtn": { "escToDisBtn": "1", "describe": "1:true,0:false" },
+    "maininterface": { "width": "900", "height": "500" },
+    "subinterface": { "width": "900", "height": "500" }
+  },
+  "like": [
+    {
+      "url": "/th?id=OHR.HyacinthMacaws_ZH-CN1191345036_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "copyright": "baxi (© David Pattyn/Minden Pictures)"
+    },
+    {
+      "url": "/th?id=OHR.MexicoMonarchs_ZH-CN7526758236_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp",
+      "copyright": "漫天飞舞的黑脉金斑蝶，墨西哥 (© Sylvain Cordier/Minden Pictures)"
+    }
+  ],
+  "likeSongs": [{ "name": "jar of love" }],
+  "todo": [
+    {
+      "event": "",
+      "everyday": true,
+      "date": "",
+      "time": "09:16",
+      "remind": false,
+      "writetime": "",
+      "fulltime": ""
+    }
+  ],
+  "myWords": { "juzi": "don't believe what you see" },
+  "oneWord": [{ "content": "Don't believe what you see" }]
+}

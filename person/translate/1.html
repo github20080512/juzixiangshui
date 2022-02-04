@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           background: rgb(235, 255, 243); 
+        }
+        #int{
+            padding: 10px;
+            width: 300px;
+            font-weight: bold;
+            font-size: 14px;
+            color:#008c8c;
+        }
+        #btn{
+            padding: 10px;
+        }
+        #result{
+            margin-top: 5px;
+          
+            width: 370px;
+            height:90px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+           
+        }
+        #int,#result,#btn{
+            outline: 0;
+            border: 1px solid rgb(184, 255, 187);
+        }
+        #int:focus,#result:focus{
+            border: 1px solid green;
+        }
+        #btn{
+            background-color:rgba(184, 255, 188, 0.388) ;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background: rgba(205, 255, 160, 0.742);
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div><input type="text" id="int"><button id="btn">G o</button></div>
+    <div>
+       <textarea name="" id="result" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        function gid(i) {
+            return document.getElementById(i)
+        }
+        const ipcRenderer = require("electron").ipcRenderer;
+        function fn(){
+            gid("result").value="..."
+            var str = gid("int").value
+            if(str==""){
+                return
+            }
+            let url = `http://fanyi.youdao.com/translate?&doctype=json&type=AUTO&i=` + str
+            var result = ipcRenderer.sendSync("askhttp", url);
+            result = JSON.parse(result)
+            var resultStr = result.translateResult[0][0]["tgt"];
+            gid("result").value=resultStr
+            gid("int").focus()
+        }
+        gid("btn").onclick = function () {
+            fn()
+        }
+
+        gid("int").onkeydown=function(e){
+            console.log(e.key)
+            if(e.key=="Enter"){
+                fn()
+            }
+        }
+        ipcRenderer.on("on-translate", (e, args) => {
+            gid("int").focus()
+            gid("int").value=args.translateSrc
+            gid("result").value=args.translateresult
+      });
+
+      gid("int").focus()
+    </script>
+</body>
+
+</html>
